@@ -1,4 +1,5 @@
 # app.py
+import os
 from flask import Flask, render_template, request, jsonify
 from fuzzywuzzy import fuzz
 from knowledge_base import get_knowledge_base
