@@ -1,0 +1,42 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>جامعة بدر بأسيوط - بوت الاستعلامات</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box" id="chatBox">
+            <!-- رسالة الترحيب -->
+            <div class="message bot">
+                <strong> بوت استعلامات جامعة بدر بأسيوط</strong><br>
+                مرحبًا! أنا بوت رسمي لتقديم المساعدة حول <strong>جامعة بدر - أسيوط</strong>.<br>
+                اسألني عن:<br>
+                • الكليات والبرامج<br>
+                • الشروط والرسوم<br>
+                • عناوين المكتب والحرم الجامعي<br>
+                • التقديم الإلكتروني<br>
+                <br>
+                تم التطوير بواسطة: 
+                <a href="https://www.linkedin.com/in/abdelrahman-oraby-92588a2a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                   target="_blank" 
+                   style="color: #0056b3; font-weight: bold; text-decoration: underline;">
+                Abdo Oraby
+                </a>
+            </div>
+        </div>
+
+        <!-- مربع الكتابة -->
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="اكتب سؤالك هنا..." />
+            <button onclick="sendMessage()">أرسل</button>
+        </div>
+    </div>
+
+    <!-- ملف الجافا سكريبت -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
