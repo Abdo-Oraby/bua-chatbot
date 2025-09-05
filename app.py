@@ -1,4 +1,5 @@
 # app.py
+import os
 from flask import Flask, render_template, request, jsonify
 from fuzzywuzzy import fuzz
 from knowledge_base import get_knowledge_base
@@ -39,4 +40,4 @@ def ask():
     return jsonify({"response": bot_response})
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8000)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
